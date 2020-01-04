@@ -18,7 +18,7 @@ type DeviceInfo struct {
 	Version       uint16   `json:"version"`
 	WPAConfigured bool     `json:"wpa_configured"`
 	WPAID         uint16   `json:"wpa_id"`
-	WPAState      uint16   `json:"wpa_state`
+	WPAState      uint16   `json:"wpa_state"`
 }
 type Location struct {
 	Latitude  float64 `json:"latitude"`
