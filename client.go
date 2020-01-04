@@ -7,12 +7,14 @@ import (
 	"net/http"
 )
 
+// Client represents a Google Home REST client
 type Client struct {
 	client   *http.Client
 	endpoint string
 	port     string
 }
 
+// NewClient creates a new Client
 func NewClient(client *http.Client, endpoint string) *Client {
 	return &Client{
 		client:   client,
@@ -38,6 +40,8 @@ func (c *Client) get(path string) (body []byte, err error) {
 	}
 	return body, nil
 }
+
+// DeviceInfo returns the device info from the device's endpoint
 func (c *Client) DeviceInfo() (*DeviceInfo, error) {
 	body, err := c.get(Info.String())
 	if err != nil {

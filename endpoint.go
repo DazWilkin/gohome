@@ -1,5 +1,6 @@
 package gohome
 
+// Endpoint represents an enum of the REST API paths
 type Endpoint string
 
 func (e Endpoint) String() string {
