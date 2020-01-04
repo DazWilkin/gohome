@@ -1,4 +1,4 @@
-package main
+package gohome
 
 type Endpoint string
 

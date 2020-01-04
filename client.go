@@ -1,4 +1,4 @@
-package main
+package gohome
 
 import (
 	"encoding/json"
@@ -13,15 +13,14 @@ type Client struct {
 	port     string
 }
 
-func NewClient(client *http.Client, endpoint, port string) *Client {
+func NewClient(client *http.Client, endpoint string) *Client {
 	return &Client{
 		client:   client,
 		endpoint: endpoint,
-		port:     port,
 	}
 }
 func (c *Client) url(path string) string {
-	return fmt.Sprintf("http://%s:%s/%s", c.endpoint, c.port, path)
+	return fmt.Sprintf("http://%s/%s", c.endpoint, path)
 }
 func (c *Client) get(path string) (body []byte, err error) {
 	req, err := http.NewRequest("GET", c.url(path), nil)
