@@ -4,7 +4,7 @@ package gohome
 type DeviceInfo struct {
 	BSSID             string     `json:"bssid"`
 	BuildVersion      string     `json:"build_version"`
-	CastBuildVersion  string     `json:"cast_build_version"`
+	CastBuildRevision string     `json:"cast_build_revision"`
 	Connected         bool       `json:"connected"`
 	EthernetConnected bool       `json:"ethernet_connected"`
 	HasUpdate         bool       `json:"has_update"`
